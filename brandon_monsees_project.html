@@ -1,0 +1,61 @@
+<!doctype html>
+<html ng-app="items">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="myapp.js"></script>
+</head>
+
+<body ng-controller="ItemsController as items">
+	<div class="top">
+		<!--	I tried adding ng-hide="tab=3" to the <div class="top"> so that when the scanner came up the top part wouldn't show. However when doing this it caused the application to only show tab 3 	-->
+
+		<section ng-init="tab=1">
+			<!--			<div ng-hide="tab=3">-->
+			<button class="logo-home" ng-click="tab = 1"></button>
+			<button class="add-item" ng-click="tab = 2"><img src="plus-sign.png" style="height:35px;"></button>
+			<!--			</div>-->
+	</div>
+	<div ng-show="tab===1">
+		<div class="food" ng-repeat="product in items.products">
+			<div ng-show="product.usedup">
+				<h1><div class="food-image"><img ng-src="{{product.image[0]}}"/></div> {{product.name}} <button class="x">x</button></h1>
+			</div>
+		</div>
+	</div>
+	</div>
+	</section>
+
+	<div ng-show="tab===2">
+		<!--	Didn't know if there was a better way to show multiple tabs without copying the same code over again into the new tab -->
+		<div class="food" ng-repeat="product in items.products">
+			<div ng-show="product.usedup">
+				<h1><div class="food-image"><img ng-src="{{product.image[0]}}"/></div> {{product.name}} <button class="x">x</button></h1>
+			</div>
+		</div>
+		<div class="addbox">
+			<h2><button class="choosing2" ng-click="tab=3"> Scan</button></h2>
+			<h2><button class="choosing" ng-click="tab=4"> Manual</button></h2>
+		</div>
+	</div>
+	<div ng-show="tab===3">
+		<img class="relative" src="barcode_scanner.png" style="width:360px;">
+		<button class="home" ng-click="tab = 1"><img src="backbutton.png"></button>
+	</div>
+
+	<div class="iteminput" ng-show="tab===4">
+		<div class="itemarea">
+			<!--
+	I was working on adding a calendar however I had some struggles of where to put some of the coding. I used this website to try and add the calendar
+	http://myplanet.github.io/angular-date-picker/#download
+-->
+		</div>
+
+	</div>
+</body>
+
+
+
+</html>

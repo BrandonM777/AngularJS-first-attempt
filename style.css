@@ -1,0 +1,123 @@
+body {
+	width: 400px;
+	margin: auto;
+	margin-top: 10px;
+	margin-left: 10px;
+	border-style: solid;
+	border-width: 20px;
+	float: left;
+	border-radius: 30px;
+}
+
+.food {
+	background-color: limegreen;
+	width: 100%;
+	padding: 20px;
+	float: left;
+}
+
+.food-image {
+	background-color: white;
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-right: 20px;
+}
+
+.x {
+	float: right;
+	width: 50ox;
+	height: auto;
+	background: none;
+	border: none;
+}
+
+.top {
+	height: 100px;
+	background-image: url(logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+	position: relative;
+}
+
+.logo-home {
+	width: 80px;
+	height: 80px;
+	margin: 10px 140px;
+	background: none;
+	border: none;
+}
+
+.add-item {
+	height: 50px;
+	background-color: green;
+	width: 50px;
+	float: right;
+	position: absolute;
+	top: 25px;
+	right: 30px;
+	border: none;
+	border-radius: 10px;
+}
+
+.addbox {
+	height: 150px;
+	background-color: white;
+	position: relative;
+	top: 25px;
+	box-shadow: 5px 5px 5px #313131;
+	width: 95%;
+	margin-left: 8px;
+}
+
+h2 {
+	position: relative;
+	top: -545px;
+	/*	Something was off with the placement of my h2 text within the box so I just did a quick fix*/
+	text-align: center;
+	font-size: 2.5em;
+}
+
+.choosing,
+.choosing2 {
+	background: none;
+	border: solid;
+	border-radius: 10px;
+	border-width: 2px;
+	border-color: gray;
+	padding: 5px 42px;
+}
+
+.choosing2 {
+	padding: 5px 60px;
+}
+
+.home {
+	height: 50px;
+	width: 50px;
+	position: relative;
+	top: -60px;
+	left: 305px;
+	background-color: #505050;
+	border: none;
+	border-radius: 10px;
+}
+
+.relative {
+	position: relative;
+}
+
+.iteminput {
+	background-color: goldenrod;
+	float: left;
+	width: 100%;
+}
+
+.itemarea {
+	background-color: white;
+	width: 80%;
+	height: 200px;
+	position: relative;
+	left: 35px;
+}
